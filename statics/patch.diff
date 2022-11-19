@@ -1,0 +1,139 @@
+From 40289efe5848ba5c3cb0266e125b07136a72c008 Mon Sep 17 00:00:00 2001
+From: Sergey Stefanenko <sergey.stef@iproject.by>
+Date: Tue, 15 Nov 2022 18:07:39 +0300
+Subject: [PATCH] fix: dependencies
+
+---
+ DealerServiceSystem.sln                       | 21 ++++++++++++++-----
+ .../DealerServiceSystem.Tests.Core.csproj     | 15 ++++++++++++-
+ .../WebApiProfileTestsBase.cs                 |  6 ++++--
+ .../ProfileTestsBases/WebProfileTestsBase.cs  |  6 ++++--
+ .../DealerServiceSystem.Web.Tests.csproj      |  1 +
+ 5 files changed, 39 insertions(+), 10 deletions(-)
+
+diff --git a/DealerServiceSystem.sln b/DealerServiceSystem.sln
+index ce1d448e..3bd7856c 100644
+--- a/DealerServiceSystem.sln
++++ b/DealerServiceSystem.sln
+@@ -46,15 +46,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Config", ".Config", "{D3C5
+ EndProject
+ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerServiceSystem.Analytics.Web", "DealerServiceSystem.Analytics.Web\DealerServiceSystem.Analytics.Web.csproj", "{3E9EF35A-4F20-458A-B665-D115814B972E}"
+ EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerServiceSystem.Domain.Tests", "Tests\DealerServiceSystem.Domain.Tests\DealerServiceSystem.Domain.Tests.csproj", "{7AC5D0E7-A7D2-410B-90A5-7DDC32979559}"
++Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerServiceSystem.Domain.Tests", "Tests\DealerServiceSystem.Domain.Tests\DealerServiceSystem.Domain.Tests.csproj", "{7AC5D0E7-A7D2-410B-90A5-7DDC32979559}"
+ EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerServiceSystem.Application.Tests", "Tests\DealerServiceSystem.Application.Tests\DealerServiceSystem.Application.Tests.csproj", "{BA252104-0238-4E60-84E4-E4E11B9FF8E4}"
++Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerServiceSystem.Application.Tests", "Tests\DealerServiceSystem.Application.Tests\DealerServiceSystem.Application.Tests.csproj", "{BA252104-0238-4E60-84E4-E4E11B9FF8E4}"
+ EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerServiceSystem.Web.Tests", "Tests\DealerServiceSystem.Web.Tests\DealerServiceSystem.Web.Tests.csproj", "{FF28B274-1170-4685-BD28-7FA7D6AFF65E}"
++Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerServiceSystem.Web.Tests", "Tests\DealerServiceSystem.Web.Tests\DealerServiceSystem.Web.Tests.csproj", "{FF28B274-1170-4685-BD28-7FA7D6AFF65E}"
+ EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerServiceSystem.WebApi.Tests", "Tests\DealerServiceSystem.WebApi.Tests\DealerServiceSystem.WebApi.Tests.csproj", "{9883DD93-0EBA-4DF9-AB6B-29C22196934A}"
++Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerServiceSystem.WebApi.Tests", "Tests\DealerServiceSystem.WebApi.Tests\DealerServiceSystem.WebApi.Tests.csproj", "{9883DD93-0EBA-4DF9-AB6B-29C22196934A}"
+ EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerServiceSystem.Cli.Tests", "Tests\DealerServiceSystem.Cli.Tests\DealerServiceSystem.Cli.Tests.csproj", "{04AE4592-D994-44EC-97EB-363673E473FE}"
++Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerServiceSystem.Cli.Tests", "Tests\DealerServiceSystem.Cli.Tests\DealerServiceSystem.Cli.Tests.csproj", "{04AE4592-D994-44EC-97EB-363673E473FE}"
++EndProject
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerServiceSystem.Tests.Core", "Tests\DealerServiceSystem.Tests.Core\DealerServiceSystem.Tests.Core.csproj", "{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}"
+ EndProject
+ Global
+ 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+@@ -200,6 +202,14 @@ Global
+ 		{04AE4592-D994-44EC-97EB-363673E473FE}.Local|Any CPU.Build.0 = Debug|Any CPU
+ 		{04AE4592-D994-44EC-97EB-363673E473FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+ 		{04AE4592-D994-44EC-97EB-363673E473FE}.Release|Any CPU.Build.0 = Release|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.3PDevelopment|Any CPU.ActiveCfg = Debug|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.3PDevelopment|Any CPU.Build.0 = Debug|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.Local|Any CPU.ActiveCfg = Debug|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.Local|Any CPU.Build.0 = Debug|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E}.Release|Any CPU.Build.0 = Release|Any CPU
+ 	EndGlobalSection
+ 	GlobalSection(SolutionProperties) = preSolution
+ 		HideSolutionNode = FALSE
+@@ -222,6 +232,7 @@ Global
+ 		{FF28B274-1170-4685-BD28-7FA7D6AFF65E} = {74A42617-1820-45F9-B06B-E63A89F3AD9C}
+ 		{9883DD93-0EBA-4DF9-AB6B-29C22196934A} = {74A42617-1820-45F9-B06B-E63A89F3AD9C}
+ 		{04AE4592-D994-44EC-97EB-363673E473FE} = {74A42617-1820-45F9-B06B-E63A89F3AD9C}
++		{D90B9604-BF1F-438C-A9E2-CFF9CC0DA34E} = {74A42617-1820-45F9-B06B-E63A89F3AD9C}
+ 	EndGlobalSection
+ 	GlobalSection(ExtensibilityGlobals) = postSolution
+ 		SolutionGuid = {15B83BF0-1300-4533-A2FF-1F5BD4ABC88D}
+diff --git a/Tests/DealerServiceSystem.Tests.Core/DealerServiceSystem.Tests.Core.csproj b/Tests/DealerServiceSystem.Tests.Core/DealerServiceSystem.Tests.Core.csproj
+index 132c02c5..34bcc487 100644
+--- a/Tests/DealerServiceSystem.Tests.Core/DealerServiceSystem.Tests.Core.csproj
++++ b/Tests/DealerServiceSystem.Tests.Core/DealerServiceSystem.Tests.Core.csproj
+@@ -1,4 +1,4 @@
+-<Project Sdk="Microsoft.NET.Sdk">
++﻿<Project Sdk="Microsoft.NET.Sdk">
+ 
+   <PropertyGroup>
+     <TargetFramework>net6.0</TargetFramework>
+@@ -6,4 +6,17 @@
+     <Nullable>enable</Nullable>
+   </PropertyGroup>
+ 
++  <ItemGroup>
++    <PackageReference Include="AutoFixture" Version="4.17.0" />
++    <PackageReference Include="AutoFixture.AutoNSubstitute" Version="4.17.0" />
++    <PackageReference Include="AutoFixture.Xunit2" Version="4.17.0" />
++  </ItemGroup>
++
++  <ItemGroup>
++    <ProjectReference Include="..\..\DealerServiceSystem.Application\DealerServiceSystem.Application.csproj" />
++    <ProjectReference Include="..\..\DealerServiceSystem.Domain\DealerServiceSystem.Domain.csproj" />
++    <ProjectReference Include="..\..\DealerServiceSystem.WebApi\DealerServiceSystem.WebApi.csproj" />
++    <ProjectReference Include="..\..\DealerServiceSystem.Web\DealerServiceSystem.Web.csproj" />
++  </ItemGroup>
++
+ </Project>
+diff --git a/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebApiProfileTestsBase.cs b/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebApiProfileTestsBase.cs
+index 5d48e257..27c1f241 100644
+--- a/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebApiProfileTestsBase.cs
++++ b/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebApiProfileTestsBase.cs
+@@ -5,7 +5,9 @@ namespace DealerServiceSystem.Tests.Core.ProfileTestsBases
+ {
+     public class WebApiProfileTestsBase : ProfileTestsBase
+     {
+-        public WebApiProfileTestsBase() :
+-            base(typeof(Startup).Assembly, typeof(ApplicationProject).Assembly) { }
++        public WebApiProfileTestsBase() : base(typeof(Startup).Assembly, typeof(ApplicationProject).Assembly)
++        {
++
++        }
+     }
+ }
+diff --git a/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebProfileTestsBase.cs b/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebProfileTestsBase.cs
+index 1da19cf5..239e248b 100644
+--- a/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebProfileTestsBase.cs
++++ b/Tests/DealerServiceSystem.Tests.Core/ProfileTestsBases/WebProfileTestsBase.cs
+@@ -5,7 +5,9 @@ namespace DealerServiceSystem.Tests.Core.ProfileTestsBases
+ {
+     public class WebProfileTestsBase : ProfileTestsBase
+     {
+-        public WebProfileTestsBase() :
+-            base(typeof(Startup).Assembly, typeof(DomainProject).Assembly) { }
++        public WebProfileTestsBase() : base(typeof(Startup).Assembly, typeof(DomainProject).Assembly)
++        {
++
++        }
+     }
+ }
+diff --git a/Tests/DealerServiceSystem.Web.Tests/DealerServiceSystem.Web.Tests.csproj b/Tests/DealerServiceSystem.Web.Tests/DealerServiceSystem.Web.Tests.csproj
+index e33dde4b..3f6e3b52 100644
+--- a/Tests/DealerServiceSystem.Web.Tests/DealerServiceSystem.Web.Tests.csproj
++++ b/Tests/DealerServiceSystem.Web.Tests/DealerServiceSystem.Web.Tests.csproj
+@@ -28,6 +28,7 @@
+ 
+   <ItemGroup>
+     <ProjectReference Include="..\..\DealerServiceSystem.Web\DealerServiceSystem.Web.csproj" />
++    <ProjectReference Include="..\DealerServiceSystem.Tests.Core\DealerServiceSystem.Tests.Core.csproj" />
+   </ItemGroup>
+ 
+ </Project>
+\ No newline at end of file
+-- 
+2.36.1.windows.1
+
